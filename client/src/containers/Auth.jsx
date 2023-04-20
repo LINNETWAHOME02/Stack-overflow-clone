@@ -81,7 +81,7 @@ const Auth = () => {
                 )
               }
 
-              <button type='submit' className='auth-btn' >{ isSignup ? 'Sign up' : 'Log in' }</button>
+              <button type='submit' className='auth-btn' >{ isSignup ? 'sign up' : 'log in' }</button>
 
               {
                 isSignup && (
