@@ -5,9 +5,9 @@ import { fetchAllUsers } from "./users";
 
 export const signup = (authData, navigate) => async (dispatch)  => {
     try {
-        const { data } = await api.signUp(authData) //collecting data from the backend
-        dispatch({ type: 'AUTH', data })  //will go to the reducer's auth. We are dispatching the data to redux
-        dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
+        const { data } = await api.signUp(authData); //collecting data from the backend
+        dispatch({ type: 'AUTH', data });  //will go to the reducer's auth. We are dispatching the data to redux
+        dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))));
         dispatch(fetchAllUsers());
         navigate('/')
     } catch (error) {
@@ -19,7 +19,7 @@ export const login = (authData, navigate) => async (dispatch)  => {
     try {
         const { data } = await api.logIn(authData)
         dispatch({ type: 'AUTH', data })
-        dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
+        dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))));
         navigate('/')
     }catch (error) {
         console.log(error);

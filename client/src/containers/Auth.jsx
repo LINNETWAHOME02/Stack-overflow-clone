@@ -15,7 +15,6 @@ const Auth = () => {
   const [password, setPassword] = useState('')
 
   const dispatch = useDispatch()
-
   const navigate = useNavigate()
 
   const handleSwitch = () => {
@@ -39,9 +38,7 @@ const Auth = () => {
     }else{
       dispatch(login({ email, password }), navigate)
     }
-
-    console.log({ name, email, password })
-  }
+  };
 
   return (
     <section className='auth-section'>
@@ -49,7 +46,8 @@ const Auth = () => {
         isSignup && <MoreAuth />
     }
         <div className='auth-container-2'>
-           { !isSignup && <img src={icon} alt='stack overflow icon' className='login-logo' /> }
+           {/* { !isSignup && <img src={icon} alt='stack overflow icon' className='login-logo' /> } */}
+           <img src={icon} alt='stack overflow icon' className='login-logo' />
            <form onSubmit={handleSubmit}>
                {
                   isSignup && (
@@ -100,7 +98,7 @@ const Auth = () => {
 
            <p>
             { isSignup ? 'Already have an account?' : 'Don\'t have an account?'  }
-            <button type='button' className='handle-switch-btn' onClick={handleSwitch} >{ isSignup ? 'Log in' : 'Sign up' }</button>
+            <button type='button' className='handle-switch-btn' onClick={handleSwitch} >{ isSignup ? 'Log in' : 'sign up' }</button>
            </p>
 
         </div>
