@@ -14,7 +14,6 @@ class ChatBot extends Component {
    render(){
     return(
         <div>
-        <h2>This is our chat bot</h2>
         </div>
     )
    }
