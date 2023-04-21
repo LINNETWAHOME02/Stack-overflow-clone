@@ -6,6 +6,7 @@ import Na from './components/Na'
 import Routes from './Routes';
 import { fetchAllQuestions } from './actions/question';
 import { fetchAllUsers } from './actions/users';
+import ChatBot from './components/ChatBot';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     <Router>
         <Na />
         <Routes />
+        <ChatBot />
     </Router>
     </div>
   );
